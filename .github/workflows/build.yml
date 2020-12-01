@@ -27,6 +27,6 @@ jobs:
       if: matrix.platform == 'ubuntu-latest'
       run: |
         sudo apt-get update
-        sudo apt-get install -y webkit2gtk-4.0 git
+        sudo apt-get install -y webkit2gtk-4.0 git tree 
     - name: install app dependencies and build it
-      run: git clone https://github.com/McDull-GitHub/tauri-trojan.git && cd $_ && yarn && yarn tauri build
+      run: git clone https://github.com/McDull-GitHub/tauri-trojan.git && cd $_ && yarn && yarn tauri build && tree

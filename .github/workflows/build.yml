@@ -4,7 +4,7 @@ on:
       branches: [ main ]
 
 jobs:
-  test-tauri:
+  test-compiling:
     strategy:
       fail-fast: false
       matrix:
@@ -29,4 +29,4 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y webkit2gtk-4.0 git tree 
     - name: install app dependencies and build it
-      run: git clone https://github.com/McDull-GitHub/tauri-trojan.git && cd $_ && yarn && yarn tauri build && tree
+      run: git clone https://github.com/McDull-GitHub/tauri-trojan.git && cd tauri-trojan && yarn && yarn tauri build && tree
